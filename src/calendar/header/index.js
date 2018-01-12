@@ -44,9 +44,6 @@ class CalendarHeader extends Component {
     if (nextProps.showIndicator !== this.props.showIndicator) {
       return true;
     }
-    if (nextProps.hideDayNames !== this.props.hideDayNames) {
-      return true;
-    }
     return false;
   }
 
@@ -85,7 +82,7 @@ class CalendarHeader extends Component {
     }
     return (
       <View>
-        <View style={this.style.header}>
+        {/*<View style={this.style.header}>
           {leftArrow}
           <View style={{ flexDirection: 'row' }}>
             <Text style={this.style.monthText}>
@@ -94,7 +91,7 @@ class CalendarHeader extends Component {
             {indicator}
           </View>
           {rightArrow}
-        </View>
+        </View>*/}
         {
           !this.props.hideDayNames &&
           <View style={this.style.week}>
