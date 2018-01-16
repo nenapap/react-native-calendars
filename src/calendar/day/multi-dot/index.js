@@ -86,6 +86,7 @@ class Day extends Component {
     } else if (typeof marking.disabled !== 'undefined' ? marking.disabled : this.props.state === 'disabled') {
       textStyle.push(this.style.disabledText);
     } else if (this.props.state === 'today') {
+      containerStyle.push(this.style.newTodayText);
       textStyle.push(this.style.todayText);
     }
     return (
