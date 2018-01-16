@@ -34,9 +34,10 @@ export default function(theme={}) {
       })
     },
     week: {
-      marginTop: 7,
+      paddingTop: 7,
       flexDirection: 'row',
-      justifyContent: 'space-around'
+      justifyContent: 'space-around',
+      backgroundColor: "#405261"
     },
     dayHeader: {
       marginTop: 2,
@@ -45,7 +46,7 @@ export default function(theme={}) {
       textAlign: 'center',
       fontSize: appStyle.textDayHeaderFontSize,
       fontFamily: appStyle.textDayHeaderFontFamily,
-      color: appStyle.textSectionTitleColor
+      color: "white"
     },
     ...(theme[STYLESHEET_ID] || {})
   });
