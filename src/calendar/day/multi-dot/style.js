@@ -7,9 +7,9 @@ export default function styleConstructor(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     base: {
-      width: 32,
-      height: 32,
-      alignItems: 'center'
+      width: 25,
+      height: 25,
+      alignItems: 'center',
     },
     text: {
       marginTop: 4,
@@ -24,25 +24,29 @@ export default function styleConstructor(theme={}) {
     },
     selected: {
       backgroundColor: appStyle.selectedDayBackgroundColor,
-      borderRadius: 16
+      borderRadius: 2
     },
     todayText: {
-      color: appStyle.todayTextColor
+      color: appStyle.todayTextColor,
+    },
+    newTodayText: {
+      borderRadius: 2,
+      borderWidth: 1.5,
+      borderColor: '#42b346',
     },
     selectedText: {
-      color: appStyle.selectedDayTextColor
+      color: appStyle.selectedDayTextColor,
     },
     disabledText: {
       color: appStyle.textDisabledColor
     },
     dot: {
       width: 4,
-      height: 4,
-      marginTop: 1,
+      height: 2,
+      marginTop: Platform.OS === 'android' ? 0 : 3,
       marginLeft: 1,
       marginRight: 1,
-      borderRadius: 2,
-      opacity: 0
+      opacity: 0,
     },
     visibleDot: {
       opacity: 1,
