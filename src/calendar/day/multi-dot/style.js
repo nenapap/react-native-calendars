@@ -12,25 +12,25 @@ export default function styleConstructor(theme={}) {
       alignItems: 'center',
     },
     text: {
-      marginTop: 4,
+      marginTop: Platform.OS === 'android' ? 1 : 6,
       fontSize: appStyle.textDayFontSize,
       fontFamily: appStyle.textDayFontFamily,
-      fontWeight: '300',
+      fontWeight: '500',
       color: appStyle.dayTextColor,
       backgroundColor: 'rgba(255, 255, 255, 0)'
     },
     alignedText: {
-      marginTop: Platform.OS === 'android' ? 4 : 6
     },
     selected: {
       backgroundColor: appStyle.selectedDayBackgroundColor,
-      borderRadius: 2
+      borderRadius: 4,
     },
     todayText: {
       color: appStyle.todayTextColor,
+      marginTop: Platform.OS === 'android' ? 0 : 4.25,
     },
     newTodayText: {
-      borderRadius: 2,
+      borderRadius: 4,
       borderWidth: 1.5,
       borderColor: '#42b346',
     },
@@ -41,9 +41,9 @@ export default function styleConstructor(theme={}) {
       color: appStyle.textDisabledColor
     },
     dot: {
-      width: 4,
+      width: 6,
       height: 2,
-      marginTop: Platform.OS === 'android' ? 0 : 3,
+      marginTop: Platform.OS === 'android' ? 3 : 3,
       marginLeft: 1,
       marginRight: 1,
       opacity: 0,
@@ -54,6 +54,11 @@ export default function styleConstructor(theme={}) {
     },
     selectedDot: {
       backgroundColor: appStyle.selectedDotColor
+    },
+    my: {
+      alignItems:'center',
+      width: 25,
+      height: 25
     },
     ...(theme[STYLESHEET_ID] || {})
   });
